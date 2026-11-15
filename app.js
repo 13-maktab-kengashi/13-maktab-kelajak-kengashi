@@ -34,6 +34,7 @@ const firebaseConfig = {
 
 // Firebase Authentication'dan olingan ADMIN UID:
 const ADMIN_UID = "IyR327ZoxqPUKAGm9qFI6wVEMC12";
+const DEMO_MODE = true;
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
