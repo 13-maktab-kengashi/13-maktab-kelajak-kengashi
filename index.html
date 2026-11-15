@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#241b4b">
+  <title>13-Maktab Kelajak Kengashi</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="loginView" class="login-wrap">
+    <form id="loginForm" class="login-card">
+      <div class="brand-mark">KK</div>
+      <p class="eyebrow">13-MAKTAB</p>
+      <h1>Kelajak Kengashi</h1>
+      <p class="muted">Boshqaruv platformasiga xush kelibsiz</p>
+      <label>Email yoki login<input id="email" type="email" autocomplete="username" required placeholder="email@example.com"></label>
+      <label>Parol<input id="password" type="password" autocomplete="current-password" required placeholder="Parolingiz"></label>
+      <button class="primary full" type="submit">Tizimga kirish</button>
+      <p id="loginError" class="error" role="alert"></p>
+      <p class="tiny muted">Hisobni faqat platforma administratori taqdim etadi.</p>
+    </form>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><div class="brand-mark small">KK</div><div><b>Kelajak Kengashi</b><small>13-Maktab</small></div></div>
+      <nav id="nav">
+        <button class="nav-btn active" data-page="overview">◫ <span>Bosh sahifa</span></button>
+        <button class="nav-btn admin-only" data-page="members">♙ <span>A'zolar</span></button>
+        <button class="nav-btn" data-page="tasks">☑ <span>Vazifalarim</span></button>
+        <button class="nav-btn" data-page="activities">▤ <span>Faoliyat tarixi</span></button>
+        <button class="nav-btn" data-page="awards">✧ <span>Diplom va yutuqlar</span></button>
+        <button class="nav-btn admin-only" data-page="meetings">▦ <span>Yig‘ilishlar</span></button>
+      </nav>
+      <div class="side-bottom"><div id="sideUser" class="side-user"></div><button id="logoutBtn" class="logout">Chiqish ↗</button></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow">13-MAKTAB · RAQAMLI BOSHQARUV</p><h2 id="pageTitle">Bosh sahifa</h2></div><div class="top-right"><span class="secure">● Himoyalangan kirish</span><div id="avatar" class="avatar">K</div></div></header>
+      <section id="content" class="content"></section>
+      <footer>13-Maktab Kelajak Kengashi <span>Raqamli arxiv va boshqaruv tizimi</span></footer>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
